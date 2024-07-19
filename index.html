@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+
+        <!---navbar-->
+        <div class="container-fluid d-flex ">
+            <img src="./assets/netflix_logo.png" class="logo" alt="">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TV Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My List</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="navbar-icons d-flex align-items-center ml-auto">
+                <a href="#" class="nav-link"><i class="bi bi-search text-white"></i></a>
+                <a href="#" class="nav-link"><i class="bi bi-bell text-white"></i></a>
+                <a href="#" class="nav-link" data-toggle="collapse" data-target="#profileMenu" aria-expanded="false"
+                    aria-controls="profileMenu"><i class="bi bi-person"></i></a>
+            </div>
+        </div>
+
+        <!---profilo a tendina-->
+        <div class="collapse" id="profileMenu">
+            <div class=" p-2">
+                <a class="dropdown-item text-white" href="#">Profile 1</a>
+                <a class="dropdown-item text-white" href="#">Profile 2</a>
+                <a class="dropdown-item text-white" href="#">Settings</a>
+                <a class="dropdown-item text-white" href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!---contenitore generale-->
+    <div class="container mt-4 ml-3">
+        <!---contenitore generi-->
+        <div class="d-flex justify-content-between align-items-center" id="firstContainer" >
+            <h2 id="tvShow">TV Shows</h2>
+            <select class="form-control w-auto mr-auto  text-white" id="genres">
+                <option>Genres</option>
+                <option>Action</option>
+                <option>Comedy</option>
+                <option>Drama</option>
+              
+            </select>
+            <div class="iconcine">
+               <button> <i class="bi bi-grid"> </i></button>
+               <button> <i class="bi bi-list"> </i></button>
+            </div>
+            
+        </div>
+
+        <!---carosello 1-->
+        <div class="container-fluid mt-4 px-0" id="caroselloBello">
+            <h3 class="category-title">Trending Now</h3>
+            <div id="trendingNowCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media0.webp" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media1.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media2.webp" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media3.webp" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media4.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media5.webp" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media6.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media18.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media15.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media8.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media9.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media10.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media11.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media12.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media13.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media18.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media15.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- gestione avanti indietro carosello -->
+                <div>
+                    <a class="carousel-control-prev" href="#trendingNowCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#trendingNowCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <!---carosello 2--->
+            <h3 class="category-title">Watch It Again</h3>
+            <div id="watchItAgainCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media15.jpg" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media16.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media17.jpg" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media18.jpg" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media19.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media20.jpg" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media21.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media18.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media15.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media22.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media23.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media24.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media25.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media26.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media27.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block">
+                                <div class="card">
+                                    <img src="./assets/media/media28.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media18.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media15.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- gestione avanti indietro carosello -->
+                <div>
+                    <a class="carousel-control-prev" href="#watchItAgainCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#watchItAgainCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--- carosello 3--->
+            <h3 class="category-title">New Releases</h3>
+            <div id="newReleasesCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media29.jpg" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media30.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media31.webp" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media32.jpg" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media3.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media5.webp" class="card-img-top"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block">
+                                <div class="card">
+                                    <img src="../Netflix-assets/assets/media/media7.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media18.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media15.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media8.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media9.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media10.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media11.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media12.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./assets/media/media13.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-lg-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media14.webp" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media18.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col d-none d-xl-block  d-xxl-none">
+                                <div class="card">
+                                    <img src="./assets/media/media15.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- gestione avanti indietro carosello -->
+                <div>
+                    <a class="carousel-control-prev" href="#newReleasesCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#newReleasesCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5 text-center">
+        
+        <div class="container">
+            <div class="social">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Audio and Subtitles</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Media Center</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Privacy</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Audio Description</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Investor Relations</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Legal Notices</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Help Center</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Jobs</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Cookie Preferences</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <a href="#">Corporate Information</a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <p>&copy; 1997-2019 Netflix, inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
